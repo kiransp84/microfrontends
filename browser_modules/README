@@ -1,0 +1,55 @@
+SystemJS is a polyfill 
+
+Features of SystemJS
+
+1) provides support for importmap 
+
+2) load multiple modules with one network request 
+
+with one file get multiple modules 
+
+System.set 
+System.register 
+
+
+3) module registry 
+
+System.get
+System.has
+System.entries 
+
+4) import.meta.resolve let you get the full url for any module 
+
+
+5) import.meta.url will give you the full url for the current module 
+
+6) SystemJS supports other kinds of modules other than js modules ( json modules ,css modules ,html modules ,wasm modules )
+
+
+
+https://unpkg.com/vue@2.6.11/dist/vue.esm.browser.min.js 
+
+
+<script type = "systemjs-importmap"
+
+<script type = "systemjs-module" src=""></script> 
+or 
+<script>System.import("")</script>
+
+import =>
+System.register(['vue'], () => {
+    let Vue;
+    return {
+        setters: [
+            v => Vue = v.default;
+        ],
+        execute() {
+            new Vue({
+                e1:"#container",
+                data : {
+                    age : '4000 billion years'
+                }
+            });
+        }
+    }
+})

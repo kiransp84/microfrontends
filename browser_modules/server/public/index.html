@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Module Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        The planet Mars was formed {{ age }} ago 
+    </div>
+    <script type = "text/javascript">
+        var vue_det = new Vue({
+           el: '#container',
+           data: {
+              age: '450'
+           }
+        });
+     </script>
+     <!-- not working when calling the esm module --> 
+     <!--script type = "module" src = "main.js"></script-->
+</body>
+</html>
