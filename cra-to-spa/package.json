@@ -5,9 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build-bundle": "webpack --mode=development",
-    "build-module": "webpack --mode=development --config=webpack.singlespa.config.js",
-    "serve": "webpack-dev-server --config=webpack.singlespa.config.js",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
