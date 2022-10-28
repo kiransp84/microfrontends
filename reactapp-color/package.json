@@ -6,15 +6,16 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build-bundle": "webpack --mode=development",
-    "build-module" : "webpack --mode=development --config=webpack.singlespa.config.js",
-    "serve" : "webpack-dev-server --config=webpack.singlespa.config.js"
+    "build-module": "webpack --mode=development --config=webpack.singlespa.config.js",
+    "serve": "webpack-dev-server --config=webpack.singlespa.config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "single-spa-react": "^5.0.0"
+    "single-spa-react": "^5.0.0",
+    "systemjs-webpack-interop": "^2.3.7"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",

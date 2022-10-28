@@ -1,3 +1,6 @@
+//comment this lines
+//import './set-public-path';
+
 import singleSpaReact from 'single-spa-react';
 
 import React from 'react';
