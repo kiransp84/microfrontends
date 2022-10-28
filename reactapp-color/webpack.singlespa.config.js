@@ -1,10 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    entry: path.resolve(__dirname,'src/colors.js'),
+    entry: path.resolve(__dirname,'src/entrypoint.js'),
     output :{
-        filename: 'bundle.js',
-        path : path.resolve(__dirname,'dist')
+        publicPath:'',
+        filename: 'colors.js',
+        path : path.resolve(__dirname,'dist'),
+        libraryTarget : 'system'
     },
     devtool : 'source-map',
     mode:'development',
@@ -17,12 +19,11 @@ module.exports = {
             }
         ]
     },
-    devServer:{
-        static: path.join(__dirname, 'public/'),
-        devMiddleware : {            
-            publicPath : '/dist/'
-        },
+    devServer:{        
         port:3000,
-        hot:"only"
+        hot:"only",
+        headers: {
+            'Access-Control-Allow-Origin' : '*'
+        }
     }
 }
